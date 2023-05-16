@@ -1,0 +1,306 @@
+.hidden {
+    display: none;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* login modal */
+.modal {
+    width: 300px;
+    height: 134px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 100;
+    box-shadow: 7px 25px 45px rgb(0 0 0 / 10%);
+}
+
+.modal input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .5);
+    padding: 10px;
+    border-radius: 5px;
+    color: #777;
+}
+
+.modal input[value="Login"] {
+    display: block;
+    width: 150px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.container {
+    width: 1200px;
+    height: fit-content;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    color: #fff;
+}
+
+.container .wrapper {
+    position: relative;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, .15);
+    box-shadow: 7px 25px 45px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 20px;
+    padding: 20px;
+    /* align-items: center; */
+}
+
+.wrapper>.box {}
+
+.gotoLinkWrap>.box:nth-child(1)~*,
+.wrapper>.box:nth-child(1)~*,
+.wrapper>.box>.d-flex:nth-child(1)~* {
+    margin-top: 20px;
+}
+
+.todoListWrap {
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.todoListWrap .todoList {
+    height: calc(100% - 52px);
+    overflow-y: scroll;
+}
+
+.todoListWrap .todoList::-webkit-scrollbar {
+    display: none;
+}
+
+.todoListWrap input {
+    line-height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.todoListWrap .todoList li {
+    margin-top: 20px;
+}
+
+.todoListWrap .todoList li button {
+    margin-left: 10px;
+    background: inherit;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.todoListWrap .todoList li button:hover {
+    background-color: rgba(255, 255, 255, .2);
+    cursor: pointer;
+}
+
+.w10 {
+    width: calc(10% - 10px);
+}
+
+.w20 {
+    width: calc(20% - 10px);
+}
+
+.w30 {
+    width: calc(30% - 10px);
+}
+
+.w40 {
+    width: calc(40% - 10px);
+}
+
+.w50 {
+    width: calc(50% - 10px);
+}
+
+.w60 {
+    width: calc(60% - 10px);
+}
+
+.w70 {
+    width: calc(70% - 10px);
+}
+
+.w80 {
+    width: calc(80% - 10px);
+}
+
+.w90 {
+    width: calc(90% - 10px);
+}
+
+
+.firstWrapper,
+.firstWrapper .d-flex,
+.gotoLinkWrap .box,
+.quoteWrap {
+    align-items: center;
+}
+
+.gotoLinkWrap .box {
+    padding: 10px 20px;
+}
+
+.gotoLinkWrap .box img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gotoLinkWrap .box .text {
+    line-height: 40px;
+}
+
+/*--------------------------------------------------------------
+  [1] pc 1024px - 1920px >> 기준 1200px
+----------------------------------------------------------------*/
+@media(max-width:1200px) {
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .container.box {
+        background-color: inherit;
+        box-shadow: inherit;
+        border: none;
+        border-radius: none;
+    }
+}
+
+/*--------------------------------------------------------------
+  [2] 태블릿 768px - 1023px >> 기준 730px
+----------------------------------------------------------------*/
+@media(max-width:1024px) {
+    .secondWrapper>.d-flex {
+        -webkit-box-lines: multiple;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .firstWrapper>.box {
+        background-color: inherit;
+        box-shadow: inherit;
+        border: none;
+        border-radius: 0;
+    }
+
+    .w80 {
+        width: calc(70% - 10px);
+    }
+
+    .w20 {
+        width: calc(30% - 10px);
+    }
+}
+
+/*--------------------------------------------------------------
+  [3] 모바일  320px - 767px >> 기준 300px
+----------------------------------------------------------------*/
+@media(max-width:767px) {
+    .gotoLinkWrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .firstWrapper {
+        -webkit-box-lines: multiple;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .firstWrapper>.weatherContainer .d-flex {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    .gotoLinkWrap {
+        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    }
+
+    .gotoLinkWrap .box {
+        margin: 0 10px;
+    }
+
+    .firstWrapper {
+        flex-direction: column-reverse;
+    }
+
+    .w80,
+    .w20 {
+        width: 100%;
+        max-width: 880px;
+    }
+    .todoListWrap{
+        min-height: 300px;
+        max-height: 300px;
+    }
+    .h2 {
+        /* font-size: 20px; */
+        font-size: 1.429rem;
+    }
+
+    .firstWrapper>.weatherContainer,
+    .firstWrapper>.box,
+    .gotoLinkWrap .box,
+    .gotoLinkWrap, .quoteWrap h3.box {
+        padding: 0;
+    }
+
+    .wrapper>.box:nth-child(1)~*,
+    .gotoLinkWrap>.box:nth-child(1)~* {
+        margin-top: 0;
+    }
+
+    .gotoLinkWrap,
+    .gotoLinkWrap, .quoteWrap h3.box{
+        margin-top: 20px;
+    }
+
+    .firstWrapper.box,
+    .gotoLinkWrap, .quoteWrap h3.box {
+        background-color: inherit;
+        box-shadow: inherit;
+        border: none;
+        border-radius: 0;
+    }
+
+    .gotoLinkWrap .box img {
+        margin-right: 0;
+    }
+
+    .gotoLinkWrap .box .text {
+        display: none;
+    }
+    .gotoLinkWrap .box,
+    .gotoLinkWrap .box img{
+        height: 20px;
+    }
+}
